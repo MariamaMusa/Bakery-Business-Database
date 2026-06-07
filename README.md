@@ -1,4 +1,4 @@
-# [Project Title]
+# Global Mortality Trend Analysis
 > *This project analyses global mortality data to understand the world's leading causes of death from 1990 to 2019*
 
 ---
