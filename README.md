@@ -1,5 +1,5 @@
 # [Project Title]
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
+> *This project analyses global mortality data to understand the world's leading causes of death from 1990 to 2019*
 
 ---
 
