@@ -517,9 +517,9 @@ erDiagram
 ## 14. Author
 
 **Mariama Musa**
-Data Analyst
+(Data Analyst)
 
-- 🔗 [LinkedIn URL]
+- 🔗 https://www.linkedin.com/in/mariama-musa/
 - 💼 [Portfolio or GitHub profile URL]
 - 📧 musamariama037@gmail.com
 
