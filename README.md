@@ -1,5 +1,6 @@
-# Global Mortality Trend Analysis
-> *This project analyses global mortality data to understand the world's leading causes of death from 1990 to 2019*
+# Bakery Business Database Design 
+
+> *The purpose of this project is to design a relational database for a small bakery business owned by a sole proprietor. *
 
 ---
 
@@ -41,19 +42,6 @@
   Cover: context → problem → approach → outcome.
   Read it out loud. If it sounds like a form - rewrite it.
 
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
-
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
--->
 
 **Context:** [The business, research, or personal situation that motivated this project.]
 
