@@ -1,6 +1,6 @@
 # Bakery Business Database Design 
 
-> *The purpose of this project is to design a relational database for a small bakery business owned by a sole proprietor. *
+> *The purpose of this project is to design a relational database for a small bakery business. *
 
 ---
 
@@ -36,20 +36,13 @@
 ---
 
 ## 1. Project Overview
+**Context:** A small cupcake bakery in Ghana relied on manual record-keeping and had no centralised system for storing information about customers, orders, products, ingredient purchases, or inventory usage. As the business grows, maintaining accurate records and extracting useful insights becomes increasingly difficult.
 
-<!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
+**Problem Statement:** The absence of a structured data management system limited the bakery's ability to track sales performance, monitor ingredient consumption, manage customer information, and make informed business decisions. Important operational data was scattered, inconsistent, and difficult to analyse
 
+**Approach:** I designed a relational database in MySQL to model the bakery's core business processes. The project involved gathering business requirements, identifying key entities, defining relationships and cardinalities, creating an Entity Relationship Diagram (ERD), applying normalization principles to reduce redundancy, and implementing primary keys, foreign keys, and integrity constraints to ensure data consistency and reliability.
 
-**Context:** [The business, research, or personal situation that motivated this project.]
-
-**Problem Statement:** [The specific question or challenge you were addressing.]
-
-**Approach:** [In 1–2 sentences - how did you tackle it?]
-
-**Outcome:** [What did you produce or discover?]
+**Outcome:** The project resulted in a fully normalised relational database schema consisting of eight interconnected tables covering customers, orders, order details, products, product categories, ingredients, recipes, and ingredient purchases. The database provides a scalable foundation for managing business records, maintaining data quality, and supporting future reporting, inventory analysis, sales tracking, and data-driven decision making.
 
 ---
 
