@@ -1,6 +1,6 @@
 # Bakery Business Database Design 
 
-> *The purpose of this project is to design a relational database for a small bakery business. *
+The purpose of this project is to design a relational database for a small bakery business. 
 
 ---
 
@@ -48,28 +48,10 @@
 
 ## 2. Objectives
 
-<!--
-  Write objectives that are specific enough to succeed or fail.
-  Use action-oriented verbs: Identify, Determine, Quantify, Build, Evaluate.
+- **Primary Objective:** Design a centralized system for business records
+- **Secondary Objective 1:** Ensure the system store relevant, complete, consistent and high quality data over time
+- **Secondary Objective 2:** Create a reliable data foundation for future business decisions and analysis
 
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Determine whether customer churn rate correlates with support ticket volume."
-  ✅ "Identify the top three revenue-driving product categories across all regions."
-  ✅ "Build a reproducible pipeline that ingests and cleans daily sales exports."
-
-  WHAT TO AVOID:
-  ❌ "Explore the data."
-  ❌ "Gain insights."
-  ❌ "Understand trends."
-  (These can't fail - which means they can't succeed either.)
--->
-
-- **Primary Objective:** [The main thing you set out to do]
-- **Secondary Objective 1:** [Supporting goal]
-- **Secondary Objective 2:** [Supporting goal]
-- **Secondary Objective 3:** [Remove if not applicable]
-
-> 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
 ---
 
