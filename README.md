@@ -163,12 +163,12 @@ The purpose of this project is to design a relational database for a small baker
      if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
 -->
 
-### Dataset / Table: `[name]`
+### Product Table
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| `[field_1]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_2]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
+| Product ID | VARCHAR | Unique identifier for every product | 00001 |
+| Product name | VARCHAR | Name of the product | [Non-sensitive example] |
 | `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
 
 > **Row count (approx.):** [X rows]
