@@ -167,15 +167,120 @@ The purpose of this project is to design a relational database for a small baker
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Product ID | VARCHAR | Unique identifier for every product | 00001 |
-| Product name | VARCHAR | Name of the product | [Non-sensitive example] |
-| `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
+| Product ID | VARCHAR(20) | Unique identifier for every product | 00001 |
+| Product name | VARCHAR(50) | Name of the product | Cupcake |
+| Category ID  | VARCHAR(20) | Category the product belongs | Chocolate |
+| Unit price  | DECIMAL(10,2) | Price of a single product | 5.0 |
 
-> **Row count (approx.):** [X rows]
 > **Date range:** [Start] – [End]
-> **Key join / relationship:** [e.g., `orders.customer_id` → `customers.id`]
+> **Key relationship:** product.category_id → category_id 
 
-*Add additional table blocks as needed for multi-table projects.*
+
+### Product Category Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Category ID | VARCHAR(20) | Unique identifier for every category | 00001 |
+| Category name | VARCHAR(50) | Name of the category | Chocolate |
+
+
+### Order Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Order ID | INTEGER | Unique identifier for every order | 00001 |
+| Customer ID | VARCHAR(20) | Identifier of the customer who placed the order | Cupcake |
+| Order date  | DATETIME | Date and time the order was placed | 2025-06-23 |
+| Delivery date  | DATE | Date the order was or will be delivered | 2025-06-23 |
+| Payment mode  | VARCHAR(20) | Mode of payment by the customer | Cash |
+| Delivery mode  | VARCHAR(20) | Mode the order was delivered | Delivery |
+
+> **Date range:** [Start] – [End]
+> **Key relationship:** order.customer_id → customer_id 
+
+
+### Order Details Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Order details ID | INTEGER | Unique identifier for every order detail | 00001 |
+| Order ID | INTEGER | Identifier for the parent order | 00001 |
+| Product ID | VARCHAR(20) | Identifier of the product ordered | Cupcake |
+| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 2025-06-23 |
+| Quantity | INTEGER | Number of units ordered  | 2025-06-23 |
+| Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
+| Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
+
+> **Date range:** [Start] – [End]
+> **Key relationship:** order.customer_id → customer_id
+
+
+### Customer Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Order details ID | INTEGER | Unique identifier for every order detail | 00001 |
+| Order ID | INTEGER | Identifier for the parent order | 00001 |
+| Product ID | VARCHAR(20) | Identifier of the product ordered | Cupcake |
+| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 2025-06-23 |
+| Quantity | INTEGER | Number of units ordered  | 2025-06-23 |
+| Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
+| Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
+
+> **Date range:** [Start] – [End]
+> **Key relationship:** order.customer_id → customer_id
+
+
+
+### Ingredient Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Order details ID | INTEGER | Unique identifier for every order detail | 00001 |
+| Order ID | INTEGER | Identifier for the parent order | 00001 |
+| Product ID | VARCHAR(20) | Identifier of the product ordered | Cupcake |
+| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 2025-06-23 |
+| Quantity | INTEGER | Number of units ordered  | 2025-06-23 |
+| Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
+| Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
+
+> **Date range:** [Start] – [End]
+> **Key relationship:** order.customer_id → customer_id
+
+
+
+### Product Ingredient Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Order details ID | INTEGER | Unique identifier for every order detail | 00001 |
+| Order ID | INTEGER | Identifier for the parent order | 00001 |
+| Product ID | VARCHAR(20) | Identifier of the product ordered | Cupcake |
+| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 2025-06-23 |
+| Quantity | INTEGER | Number of units ordered  | 2025-06-23 |
+| Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
+| Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
+
+> **Date range:** [Start] – [End]
+> **Key relationship:** order.customer_id → customer_id
+
+
+
+### Purchases Table
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| Order details ID | INTEGER | Unique identifier for every order detail | 00001 |
+| Order ID | INTEGER | Identifier for the parent order | 00001 |
+| Product ID | VARCHAR(20) | Identifier of the product ordered | Cupcake |
+| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 2025-06-23 |
+| Quantity | INTEGER | Number of units ordered  | 2025-06-23 |
+| Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
+| Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
+
+> **Date range:** [Start] – [End]
+> **Key relationship:** order.customer_id → customer_id
+
 
 ---
 
