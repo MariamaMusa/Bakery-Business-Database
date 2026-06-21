@@ -8,7 +8,7 @@ The purpose of this project was to design a relational database for a small bake
 > *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
 - [ ] Exploratory Data Analysis (EDA)
-- [* ] SQL Analysis / Querying
+- [ ] SQL Analysis / Querying
 - [ ] Dashboard / Data Visualization
 - [ ] Data Pipeline / ETL
 - [ ] Predictive Modelling / Machine Learning
@@ -24,9 +24,6 @@ The purpose of this project was to design a relational database for a small bake
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
 6. [Data Model & Schema](#6-data-model--schema)
-7. [Analysis & Metrics](#8-analysis--metrics)
-8. [Key Insights](#9-key-insights)
-10. [Recommendations](#10-recommendations)
 11. [Assumptions & Limitations](#11-assumptions--limitations)
 12. [Future Enhancements](#12-future-enhancements)
 13. [Deliverables](#13-deliverables)
@@ -131,7 +128,7 @@ The purpose of this project was to design a relational database for a small bake
 | Payment mode  | VARCHAR(20) | Mode of payment by the customer | Cash |
 | Delivery mode  | VARCHAR(20) | Mode the order was delivered | Delivery |
 
-> **Date range:** [Start] – [End]
+> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -148,7 +145,7 @@ The purpose of this project was to design a relational database for a small bake
 | Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
 | Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
 
-> **Date range:** [Start] – [End]
+> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -166,7 +163,7 @@ The purpose of this project was to design a relational database for a small bake
 | Joined date | DATE | Date the customer first placed an order  | Delivery |
 | Customer type | VARCHAR(50) | Customer classification | Delivery |
 
-> **Date range:** [Start] – [End]
+> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 >
 
@@ -179,7 +176,6 @@ The purpose of this project was to design a relational database for a small bake
 | Ingredient ID | VARCHAR(20) | Unique identifier for every ingredient | 00001 |
 | Ingredient name | VARCHAR(50) | Name of the ingredient | 00001 |
 
-> **Date range:** [Start] – [End]
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -196,7 +192,7 @@ The purpose of this project was to design a relational database for a small bake
 | Product quantity | INTEGER | Number of product units produced | Cash |
 | Production date | DATE | Date the production was made | Delivery |
 
-> **Date range:** [Start] – [End]
+> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -213,7 +209,7 @@ The purpose of this project was to design a relational database for a small bake
 | Ingredient quantity | INTEGER | Number of units purchased  | 2025-06-23 |
 | Purchase date | DATE | Date the ingredient was purchased | Cash |
 
-> **Date range:** [Start] – [End]
+> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 
 
