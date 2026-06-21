@@ -265,16 +265,6 @@ The purpose of this project is to design a relational database for a small baker
 
 ## 7. ERD - Entity Relationship Diagram
 
-<!--
-  An ERD shows how your tables connect to each other visually.
-  It is the fastest way for a reviewer to understand the data structure
-  of a SQL project without reading every query.
-
-  HOW TO INCLUDE YOUR ERD:
-  Option A - Image embed (most common):
-    Export your ERD from dbdiagram.io, DBeaver, Lucidchart, or similar.
-    Save to /visuals/erd.png and reference it below.
-
 ### Option A - Embedded Image
 ![ERD Diagram](visuals/erd.png)
 *[Brief caption: e.g., "Three-table schema - orders, customers, and products joined on shared IDs."]*
@@ -286,13 +276,13 @@ The purpose of this project is to design a relational database for a small baker
 
 | Relationship | Join Key | Type |
 |-------------|----------|------|
-| `customer` → `order` | `customer_id` | One-to-Many|
-| `order` → `customers` | `customer_id` | One-to-Many|
-| `orders` → `customers` | `customer_id` | Many-to-One |
-| `orders` → `products` | `product_id` | Many-to-One |
-| `orders` → `customers` | `customer_id` | One-to-Many|
-| `orders` → `customers` | `customer_id` | One-to-Many|
-| `orders` → `customers` | `customer_id` | One-to-Many|
+| customer → order | customer_id | One-to-Many|
+| order → order details | order_id | One-to-Many|
+| order details → product | product_id | Many-to-One |
+| product → product category| category_id | Many-to-One |
+| ingredient → product ingredient | ingredient_id | One-to-Many|
+| product ingredient → product | product_id| One-to-Many|
+| ingredient → purchases| ingredient_id | One-to-Many|
 
 ---
 
