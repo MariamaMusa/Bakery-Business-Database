@@ -309,7 +309,7 @@ The purpose of this project was to design a relational database for a small bake
 (Data Analyst)
 
 - 🔗 https://www.linkedin.com/in/mariama-musa/
-- 💼 [Portfolio or GitHub profile URL]
+- 💼 https://github.com/MariamaMusa
 - 📧 musamariama037@gmail.com
 
 ---
