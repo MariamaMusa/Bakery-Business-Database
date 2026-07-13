@@ -9,11 +9,10 @@ The purpose of this project was to design a relational database for a small bake
 2. [Objectives](#2-objectives)
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
-6. [Data Model & Schema](#6-data-model--schema)
-11. [Assumptions & Limitations](#11-assumptions--limitations)
-12. [Future Enhancements](#12-future-enhancements)
-13. [Deliverables](#13-deliverables)
-14. [Author](#14-author)
+5. [Data Model & Schema](#6-data-model--schema)
+6. [Assumptions & Limitations](#11-assumptions--limitations)
+7. [Future Enhancements](#12-future-enhancements)
+8. [Author](#14-author)
 
 ---
 
@@ -69,9 +68,9 @@ The purpose of this project was to design a relational database for a small bake
 │   ├── transformations/      # Cleaning and reshaping logic
 │   └── final/                # Production-ready or presentation queries
 │
-├── reports/                  # Final outputs: PDFs, slide decks, Word docs
+├── reports/                  # Final outputs: PDF
 │
-├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
+├── visuals/                  # ERD diagram
 │
 └── README.md                 # You are here
 ```
@@ -79,7 +78,7 @@ The purpose of this project was to design a relational database for a small bake
 ---
 
 
-## 6. Data Model & Schema
+## 5. Data Model & Schema
 
 ### Product Table
 
@@ -201,7 +200,7 @@ The purpose of this project was to design a relational database for a small bake
 
 ---
 
-## 7. ERD - Entity Relationship Diagram
+## ERD - Entity Relationship Diagram
 
 ### Option A - Embedded Image
 ![ERD Diagram](visuals/erd.png)
@@ -225,7 +224,7 @@ The purpose of this project was to design a relational database for a small bake
 ---
 
 
-## 11. Assumptions & Limitations
+## 7. Assumptions & Limitations
 
 <!--
   WHAT GOOD LOOKS LIKE:
@@ -257,7 +256,7 @@ The purpose of this project was to design a relational database for a small bake
 
 ---
 
-## 12. Future Enhancements
+## 8. Future Enhancements
 
 <!--
   WHAT GOOD LOOKS LIKE:
@@ -279,17 +278,7 @@ The purpose of this project was to design a relational database for a small bake
 
 ---
 
-## 13. Deliverables
-
-| Deliverable | Description | Location |
-|-------------|-------------|----------|
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
-
----
-
-## 14. Author
+## 9. Author
 
 **Mariama Musa**
 (Data Analyst)
@@ -300,4 +289,4 @@ The purpose of this project was to design a relational database for a small bake
 
 ---
 
-*Last updated: June, 2026*
+*Last updated: July, 2026*
