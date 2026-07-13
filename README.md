@@ -89,7 +89,6 @@ The purpose of this project was to design a relational database for a small bake
 | Category ID  | VARCHAR(20) | Category the product belongs | Chocolate |
 | Unit price  | DECIMAL(10,2) | Price of a single product | 5.0 |
 
-> **Date range:** [Start] – [End]
 > **Key relationship:** product.category_id → category_id
 > 
 
@@ -113,7 +112,6 @@ The purpose of this project was to design a relational database for a small bake
 | Payment mode  | VARCHAR(20) | Mode of payment by the customer | Cash |
 | Delivery mode  | VARCHAR(20) | Mode the order was delivered | Delivery |
 
-> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -130,7 +128,6 @@ The purpose of this project was to design a relational database for a small bake
 | Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
 | Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
 
-> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -148,7 +145,6 @@ The purpose of this project was to design a relational database for a small bake
 | Joined date | DATE | Date the customer first placed an order  | Delivery |
 | Customer type | VARCHAR(50) | Customer classification | Delivery |
 
-> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 >
 
@@ -177,7 +173,6 @@ The purpose of this project was to design a relational database for a small bake
 | Product quantity | INTEGER | Number of product units produced | Cash |
 | Production date | DATE | Date the production was made | Delivery |
 
-> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 > 
 
@@ -194,18 +189,14 @@ The purpose of this project was to design a relational database for a small bake
 | Ingredient quantity | INTEGER | Number of units purchased  | 2025-06-23 |
 | Purchase date | DATE | Date the ingredient was purchased | Cash |
 
-> **Date range:** June – Present
 > **Key relationship:** order.customer_id → customer_id
 
 
 ---
 
 ## ERD - Entity Relationship Diagram
-
-### Option A - Embedded Image
-![ERD Diagram](visuals/erd.png)
-*[Brief caption: e.g., "Three-table schema - orders, customers, and products joined on shared IDs."]*
-
+![ERD Diagram](visuals/ERD.png)
+Eight-table schema - customers, ingredient, order_details, orders, product_category, product_ingredient, products and purchases joined on shared IDs
 
 ---
 
@@ -225,56 +216,25 @@ The purpose of this project was to design a relational database for a small bake
 
 
 ## 7. Assumptions & Limitations
-
-<!--
-  WHAT GOOD LOOKS LIKE:
-  Assumption: "Transaction records were assumed to be complete for all five regions.
-               No validation was performed against source system record counts."
-  Limitation: "The analysis cannot distinguish between returns initiated by
-               the customer vs. returns initiated by the business (e.g., recalls).
-               If business-initiated returns are concentrated in Region A, the
-               return rate finding may reflect a policy decision, not a quality issue."
-
-  WHAT TO AVOID:
-  ❌ Leaving this section blank or writing "None known."
-     Every project has limitations. Documenting them is a sign of
-     analytical maturity - not a confession of failure.
--->
-
 ### Assumptions
-- [What did you treat as true without being able to verify?]
-- [What simplifications did you make for scope or feasibility?]
-- [What domain rules or definitions did you accept as given?]
+- This project assumes that the bakery will continue to operate as a single-location business and that all business transactions are recorded accurately and consistently.
+- It assumes ingredient purchases are entered promptly to maintain accurate records.
+- It is also assumed that users of the database have basic knowledge of data entry procedures and will follow the defined data integrity constraints to ensure data quality.
 
 ### Limitations
-- [What gaps exist in the data?]
-- [What analysis was out of scope but could affect interpretation?]
-- [What would a more rigorous version of this project include?]
-- [Are there known biases in the data source or collection method?]
+- The project is limited to the design of the relational database and does not include the implementation of a user interface, web application or point-of-sale system.
+- It does not support advanced features such as automated inventory updates, supplier management, employee management, online ordering, payment gateway integration or real-time reporting dashboards.
+- Additionally, the database has not been validated using live operational data from the bakery, so future modifications may be required as business processes evolve.
 
-> *The goal here is pre-emptive Q&A. What would a thoughtful skeptic push back on? Document the answer here, before they ask.*
 
 ---
 
 ## 8. Future Enhancements
 
-<!--
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Automate the monthly data pull from the POS export folder using
-      a scheduled Python script, replacing the current manual process."
-  ✅ "Expand the return rate analysis to include carrier-level data,
-      which was unavailable in this dataset but exists in the logistics system."
-
-  WHAT TO AVOID:
-  ❌ "Add a machine learning model."
-     (Vague, and disconnected from the actual findings of this project.)
-  ❌ Listing aspirational features that don't follow logically from the work.
--->
-
-- [ ] [Enhancement 1 - specific and traceable to a real gap in this project]
-- [ ] [Enhancement 2]
-- [ ] [Enhancement 3]
-- [ ] [Enhancement 4]
+- [ ] Add sales forecasting and demand prediction using machine learning techniques.
+- [ ] Support multi-branch operations by extending the database for multiple bakery locations.
+- [ ] Develop interactive dashboards for sales, customer, and inventory analysis using tools such as Power BI
+- [ ] Develop a web or mobile application for easier data entry and management.
 
 ---
 
