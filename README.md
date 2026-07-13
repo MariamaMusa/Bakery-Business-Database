@@ -61,18 +61,13 @@ The purpose of this project was to design a relational database for a small bake
 ```
 [project-root]/
 │
-├── docs/                     # Data dictionaries, schema notes, reference material
+├── queries/                
 │
-├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
-│   ├── exploratory/          # Ad-hoc or investigative queries
-│   ├── transformations/      # Cleaning and reshaping logic
-│   └── final/                # Production-ready or presentation queries
+├── reports/                  
 │
-├── reports/                  # Final outputs: PDF
+├── visuals/                 
 │
-├── visuals/                  # ERD diagram
-│
-└── README.md                 # You are here
+└── README.md                
 ```
 
 ---
