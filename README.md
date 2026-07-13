@@ -98,6 +98,8 @@ The purpose of this project was to design a relational database for a small bake
 | Category ID | VARCHAR(20) | Unique identifier for every category | C001 |
 | Category name | VARCHAR(50) | Name of the category | Chocolate |
 
+>
+
 
 ### Order Table
 
@@ -126,7 +128,7 @@ The purpose of this project was to design a relational database for a small bake
 | Discount | DECIMAL(5,2) | Discount applied to the product (%) | 0.1 |
 | Total amount | DECIMAL(10,2) | Total amount paid for this line | 5000 |
 
-> **Key relationship:** order.customer_id → customer_id
+> **Key relationship:** order_details.order_id → order_id
 > 
 
 
@@ -143,7 +145,6 @@ The purpose of this project was to design a relational database for a small bake
 | Joined date | DATE | Date the customer first placed an order  | 2026-06-01 |
 | Customer type | VARCHAR(50) | Customer classification | Retailer |
 
-> **Key relationship:** order.customer_id → customer_id
 >
 
 
@@ -155,7 +156,6 @@ The purpose of this project was to design a relational database for a small bake
 | Ingredient ID | VARCHAR(20) | Unique identifier for every ingredient | I0001 |
 | Ingredient name | VARCHAR(50) | Name of the ingredient | Flour |
 
-> **Key relationship:** order.customer_id → customer_id
 > 
 
 
@@ -171,7 +171,7 @@ The purpose of this project was to design a relational database for a small bake
 | Product quantity | INTEGER | Number of product units produced | 20 |
 | Production date | DATE | Date the production was made | 2026-07-13 |
 
-> **Key relationship:** order.customer_id → customer_id
+> **Key relationship:** product_ingredient.ingredient_id → ingredient_id, product_ingredient.product_id → product_id
 > 
 
 
@@ -187,7 +187,7 @@ The purpose of this project was to design a relational database for a small bake
 | Ingredient quantity | INTEGER | Number of units purchased  | 2 |
 | Purchase date | DATE | Date the ingredient was purchased | 2026-06-05 |
 
-> **Key relationship:** order.customer_id → customer_id
+> **Key relationship:** purchases.ingredient_id → ingredient_id 
 
 
 ---
