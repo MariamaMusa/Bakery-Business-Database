@@ -49,8 +49,7 @@ The purpose of this project was to design a relational database for a small bake
 ### Tools & Technologies
 | Category | Tool(s) Used |
 |----------|-------------|
-| Entity Relational Diagram| Draw.io|
-| Database Implementation| MySQL|
+| Database Implementation & ERD | MySQL|
 | Version Control | GitHub |
 | Documentation | Microsoft Word |
 
@@ -67,7 +66,11 @@ The purpose of this project was to design a relational database for a small bake
 │
 ├── visuals/                 
 │
-└── README.md                
+├── .gitignore                 
+│
+├── README.md                 
+│
+└── project_metadata.yml               
 ```
 
 ---
@@ -79,9 +82,9 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Product ID | VARCHAR(20) | Unique identifier for every product | 00001 |
+| Product ID | VARCHAR(20) | Unique identifier for every product | P0001 |
 | Product name | VARCHAR(50) | Name of the product | Cupcake |
-| Category ID  | VARCHAR(20) | Category the product belongs | Chocolate |
+| Category ID  | VARCHAR(20) | Category the product belongs | C001 |
 | Unit price  | DECIMAL(10,2) | Price of a single product | 5.0 |
 
 > **Key relationship:** product.category_id → category_id
@@ -92,7 +95,7 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Category ID | VARCHAR(20) | Unique identifier for every category | 00001 |
+| Category ID | VARCHAR(20) | Unique identifier for every category | C001 |
 | Category name | VARCHAR(50) | Name of the category | Chocolate |
 
 
@@ -101,9 +104,9 @@ The purpose of this project was to design a relational database for a small bake
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
 | Order ID | INTEGER | Unique identifier for every order | 00001 |
-| Customer ID | VARCHAR(20) | Identifier of the customer who placed the order | Cupcake |
+| Customer ID | VARCHAR(20) | Identifier of the customer who placed the order | Cu00001 |
 | Order date  | DATETIME | Date and time the order was placed | 2025-06-23 |
-| Delivery date  | DATE | Date the order was or will be delivered | 2025-06-23 |
+| Delivery date  | DATE | Date the order was or will be delivered | 2025-07-23 |
 | Payment mode  | VARCHAR(20) | Mode of payment by the customer | Cash |
 | Delivery mode  | VARCHAR(20) | Mode the order was delivered | Delivery |
 
@@ -115,13 +118,13 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Order details ID | INTEGER | Unique identifier for every order detail | 00001 |
+| Order details ID | INTEGER | Unique identifier for every order detail | OD00001 |
 | Order ID | INTEGER | Identifier for the parent order | 00001 |
-| Product ID | VARCHAR(20) | Identifier of the product ordered | Cupcake |
-| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 2025-06-23 |
-| Quantity | INTEGER | Number of units ordered  | 2025-06-23 |
-| Discount | DECIMAL(5,2) | Discount applied to the product (%) | Cash |
-| Total amount | DECIMAL(10,2) | Total amount paid for this line | Delivery |
+| Product ID | VARCHAR(20) | Identifier of the product ordered | P0001 |
+| Unit price  | DECIMAL(10,2) | Price of the product at time of order (snapshot) | 5.0 |
+| Quantity | INTEGER | Number of units ordered  | 100 |
+| Discount | DECIMAL(5,2) | Discount applied to the product (%) | 0.1 |
+| Total amount | DECIMAL(10,2) | Total amount paid for this line | 5000 |
 
 > **Key relationship:** order.customer_id → customer_id
 > 
@@ -131,14 +134,14 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Customer ID | VARCHAR(20) | Unique identifier for every customer | 00001 |
-| Customer name | VARCHAR(100) | Full name of the customer | 00001 |
-| Gender | VARCHAR(10) | Gender of the customer | Cupcake |
-| Phone number | VARCHAR(15) | Contact number of the customer | 2025-06-23 |
-| Email  | VARCHAR(50) | Email address of the customer | 2025-06-23 |
-| Location | VARCHAR(100) | Address or area of the customer | Cash |
-| Joined date | DATE | Date the customer first placed an order  | Delivery |
-| Customer type | VARCHAR(50) | Customer classification | Delivery |
+| Customer ID | VARCHAR(20) | Unique identifier for every customer | Cu00001 |
+| Customer name | VARCHAR(100) | Full name of the customer | Diana Baah |
+| Gender | VARCHAR(10) | Gender of the customer | Female |
+| Phone number | VARCHAR(15) | Contact number of the customer | 0552134578 |
+| Email  | VARCHAR(50) | Email address of the customer | db@gmail.com |
+| Location | VARCHAR(100) | Address or area of the customer | Osu |
+| Joined date | DATE | Date the customer first placed an order  | 2026-06-01 |
+| Customer type | VARCHAR(50) | Customer classification | Retailer |
 
 > **Key relationship:** order.customer_id → customer_id
 >
@@ -149,8 +152,8 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Ingredient ID | VARCHAR(20) | Unique identifier for every ingredient | 00001 |
-| Ingredient name | VARCHAR(50) | Name of the ingredient | 00001 |
+| Ingredient ID | VARCHAR(20) | Unique identifier for every ingredient | I0001 |
+| Ingredient name | VARCHAR(50) | Name of the ingredient | Flour |
 
 > **Key relationship:** order.customer_id → customer_id
 > 
@@ -161,12 +164,12 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Product Ingredient ID | VARCHAR(20) | Unique identifier for every recipe entry | 00001 |
-| Ingredient ID | VARCHAR(20) | Identifier for the ingredient used | 00001 |
-| Product ID | VARCHAR(20) | Identifier of the product being made | Cupcake |
-| Ingredient quantity | INTEGER | Amount of ingredient used  | 2025-06-23 |
-| Product quantity | INTEGER | Number of product units produced | Cash |
-| Production date | DATE | Date the production was made | Delivery |
+| Product Ingredient ID | VARCHAR(20) | Unique identifier for every recipe entry | PI0001 |
+| Ingredient ID | VARCHAR(20) | Identifier for the ingredient used | I0001 |
+| Product ID | VARCHAR(20) | Identifier of the product being made | P0001 |
+| Ingredient quantity | INTEGER | Amount of ingredient used  | 5 |
+| Product quantity | INTEGER | Number of product units produced | 20 |
+| Production date | DATE | Date the production was made | 2026-07-13 |
 
 > **Key relationship:** order.customer_id → customer_id
 > 
@@ -177,12 +180,12 @@ The purpose of this project was to design a relational database for a small bake
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| Purchase ID | VARCHAR(20) | Unique identifier for every purchase record | 00001 |
-| Ingredient ID | VARCHAR(20) | Identifier of the purchased ingredient | 00001 |
-| Ingredient size | DECIMAL(10,3) | Size or weight of the ingredient purchased | Cupcake |
-| Ingredient_unit price  | DECIMAL(10,2) | Unit price of the ingredient at time of purchase | 2025-06-23 |
-| Ingredient quantity | INTEGER | Number of units purchased  | 2025-06-23 |
-| Purchase date | DATE | Date the ingredient was purchased | Cash |
+| Purchase ID | VARCHAR(20) | Unique identifier for every purchase record | B0001 |
+| Ingredient ID | VARCHAR(20) | Identifier of the purchased ingredient | I0001 |
+| Ingredient size | DECIMAL(10,3) | Size or weight of the ingredient purchased | 2.3 |
+| Ingredient_unit price  | DECIMAL(10,2) | Unit price of the ingredient at time of purchase | 230|
+| Ingredient quantity | INTEGER | Number of units purchased  | 2 |
+| Purchase date | DATE | Date the ingredient was purchased | 2026-06-05 |
 
 > **Key relationship:** order.customer_id → customer_id
 
@@ -214,22 +217,21 @@ Eight-table schema - customers, ingredient, order_details, orders, product_categ
 ### Assumptions
 - This project assumes that the bakery will continue to operate as a single-location business and that all business transactions are recorded accurately and consistently.
 - It assumes ingredient purchases are entered promptly to maintain accurate records.
-- It is also assumed that users of the database have basic knowledge of data entry procedures and will follow the defined data integrity constraints to ensure data quality.
+- It is also assumed that the user of the database have basic knowledge of data entry procedures and will follow the defined data integrity constraints to ensure data quality.
 
 ### Limitations
-- The project is limited to the design of the relational database and does not include the implementation of a user interface, web application or point-of-sale system.
+- The project is limited to the design of the relational database and does not include the implementation of a user interface for quick data entry
 - It does not support advanced features such as automated inventory updates, supplier management, employee management, online ordering, payment gateway integration or real-time reporting dashboards.
-- Additionally, the database has not been validated using live operational data from the bakery, so future modifications may be required as business processes evolve.
-
 
 ---
 
 ## 8. Future Enhancements
 
+- [ ] Integrate the database into excel for quick data entry
+- [ ] Develop a web or mobile application for easier data entry and management.
 - [ ] Add sales forecasting and demand prediction using machine learning techniques.
 - [ ] Support multi-branch operations by extending the database for multiple bakery locations.
 - [ ] Develop interactive dashboards for sales, customer, and inventory analysis using tools such as Power BI
-- [ ] Develop a web or mobile application for easier data entry and management.
 
 ---
 
