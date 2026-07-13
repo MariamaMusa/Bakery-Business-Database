@@ -228,7 +228,6 @@ Eight-table schema - customers, ingredient, order_details, orders, product_categ
 ## 8. Future Enhancements
 
 - [ ] Integrate the database into excel for quick data entry
-- [ ] Develop a web or mobile application for easier data entry and management.
 - [ ] Add sales forecasting and demand prediction using machine learning techniques.
 - [ ] Support multi-branch operations by extending the database for multiple bakery locations.
 - [ ] Develop interactive dashboards for sales, customer, and inventory analysis using tools such as Power BI
